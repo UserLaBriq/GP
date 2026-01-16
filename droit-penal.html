@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expertise en droit pénal et droit pénal international : extradition, mandat d'arrêt européen, crimes et délits. Cabinet Georges Parastatis, avocat pénaliste à Paris.">
+    <meta name="keywords" content="droit pénal, avocat pénaliste, extradition, mandat d'arrêt européen, cour d'assises, crimes sexuels">
+    <title>Droit Pénal & Pénal International - Cabinet Georges Parastatis</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#8B0000',
+                        'text-dark': '#1F2937',
+                        'text-medium': '#6B7280',
+                        'border-light': '#E5E7EB',
+                    },
+                    fontFamily: {
+                        'condensed': ['"Roboto Condensed"', 'sans-serif'],
+                        'sans': ['"Open Sans"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/input.css">
+</head>
+<body class="bg-white text-text-dark">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-border-light sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-6 md:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Brand -->
+                <div>
+                    <a href="index.html">
+                        <img src="assets/images/GP_logo.avif" alt="Cabinet Georges Parastatis" class="h-12">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium">Accueil</a>
+                    <a href="le-cabinet.html" class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium">Le Cabinet</a>
+
+                    <!-- Dropdown Domaines d'expertise -->
+                    <div class="relative group">
+                        <button class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+                            Domaines d'expertise
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-border-light shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="droit-penal.html" class="block px-4 py-3 text-xs font-semibold text-primary hover:bg-gray-50 transition-colors">Droit Pénal</a>
+                            <a href="droit-international-famille.html" class="block px-4 py-3 text-xs text-text-dark hover:bg-gray-50 hover:text-primary transition-colors">Droit International & Famille</a>
+                            <a href="responsabilite-medicale.html" class="block px-4 py-3 text-xs text-text-dark hover:bg-gray-50 hover:text-primary transition-colors">Responsabilité Médicale</a>
+                        </div>
+                    </div>
+
+                    <a href="presse.html" class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium">Presse</a>
+                    <a href="contact.html" class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-text-dark focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 space-y-3">
+                <a href="index.html" class="block text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium">Accueil</a>
+                <a href="le-cabinet.html" class="block text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium">Le Cabinet</a>
+
+                <!-- Mobile Dropdown -->
+                <div>
+                    <button id="mobile-dropdown-toggle" class="w-full text-left text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium flex items-center justify-between">
+                        Domaines d'expertise
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="mobile-dropdown" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="droit-penal.html" class="block text-xs font-semibold text-primary transition-colors">Droit Pénal</a>
+                        <a href="droit-international-famille.html" class="block text-xs text-text-dark hover:text-primary transition-colors">Droit International & Famille</a>
+                        <a href="responsabilite-medicale.html" class="block text-xs text-text-dark hover:text-primary transition-colors">Responsabilité Médicale</a>
+                    </div>
+                </div>
+
+                <a href="presse.html" class="block text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium">Presse</a>
+                <a href="contact.html" class="block text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+            <h1 class="font-condensed text-4xl md:text-5xl font-semibold text-text-dark">Droit Pénal</h1>
+        </div>
+    </section>
+
+    <!-- Droit Pénal Général -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6 md:px-8">
+            <h2 class="font-condensed text-3xl font-semibold text-text-dark mb-6">Un Avocat Pénaliste pour vous défendre</h2>
+
+            <p class="text-sm text-text-medium leading-relaxed mb-8">
+                Le Cabinet de Maître Georges Parastatis traite régulièrement de dossiers en droit pénal et a développé une expertise
+                reconnue en droit pénal général (infractions contre les biens, homicides volontaires et involontaires et de mœurs
+                (harcèlements, agressions sexuelles, viols).
+            </p>
+
+            <p class="text-sm text-text-medium leading-relaxed mb-8">
+                Le pôle droit pénal est directement dirigé par Maître Georges Parastatis.
+            </p>
+
+            <div class="bg-gray-50 border border-border-light p-8 mb-8">
+                <h3 class="font-condensed text-xl font-semibold text-text-dark mb-4">Notre accompagnement</h3>
+                <p class="text-sm text-text-medium leading-relaxed mb-4">
+                    Notre équipe est disponible pour répondre aux besoins de nos clients à tous les stades de la procédure pénale
+                    et ce, devant l'ensemble des tribunaux répressifs (Tribunal Correctionnel - Cour d'Assises) :
+                </p>
+                <ul class="text-sm text-text-medium space-y-2 list-disc list-inside">
+                    <li>Assistance en garde à vue</li>
+                    <li>Préparation aux auditions et interrogatoires</li>
+                    <li>Mises en situation</li>
+                    <li>Audiences sur la détention provisoire</li>
+                    <li>Visites régulières en détention</li>
+                </ul>
+            </div>
+
+            <p class="text-sm text-text-medium leading-relaxed mb-6">
+                Depuis 25 ans, Georges Parastatis a acquis une expérience reconnue en matière de crimes et délits sexuels et a assisté,
+                à plusieurs reprises, des clients au cours de procès d'assises.
+            </p>
+
+            <p class="text-sm text-text-medium leading-relaxed">
+                Enfin, notre équipe pénaliste, habituée aux dossiers sensibles, a acquis une réelle expertise dans la gestion médiatique
+                et judiciaire d'un dossier pénal, ce qui lui permet de proposer à ses clients des stratégies de communication.
+                Me Parastatis est également souvent consulté par les médias ou intervient dans des affaires sensibles médiatiques.
+            </p>
+        </div>
+    </section>
+
+    <!-- Droit Pénal International -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-6 md:px-8">
+            <h2 class="font-condensed text-3xl font-semibold text-text-dark mb-6">Notre expertise en droit pénal international</h2>
+
+            <p class="text-sm text-text-medium leading-relaxed mb-8">
+                Le cabinet jouit d'une excellente réputation en matière de Droit pénal international et d'extradition ou mandat d'arrêt européen.
+            </p>
+
+            <p class="text-sm text-text-medium leading-relaxed mb-8">
+                Me Parastatis défend, conseille et assiste une clientèle française et internationale tant en matière de prévention du risque
+                pénal que dans un cadre contentieux ou d'investigations nationales ou internationales. Le cabinet intervient fréquemment
+                lorsque plusieurs pays sont saisi d'un contentieux.
+            </p>
+
+            <h3 class="font-condensed text-2xl font-semibold text-text-dark mb-4 mt-12">Notre expertise en matière d'extradition ou de mandat d'arrêt européen</h3>
+
+            <p class="text-sm text-text-medium leading-relaxed mb-6">
+                Lorsque l'on parle d'extradition, il convient de distinguer deux cas de figure. Le premier dans lequel la France est l'État requis,
+                c'est à dire qu'un État tiers demande à la République Française d'extrader un individu se trouvant sur son territoire national.
+                Et ce, en vue d'un jugement ou d'une exécution de peines sur le sol de l'État requérant. Dans le second cas, l'État français est
+                l'État requérant et est donc celui qui demande à un autre État de lui remettre un individu qui aurait commis un crime ou un délit
+                sur le territoire français.
+            </p>
+
+            <p class="text-sm text-text-medium leading-relaxed mb-6">
+                La procédure d'extradition correspond à une forme de coopération judiciaire internationale et fait partie à ce titre du droit pénal
+                international. Dans le cas où l'individu serait accusé de génocides ou de crimes contre l'humanité c'est alors une juridiction
+                internationale qui jugera. Il faut savoir qu'au sein de l'Union Européenne a été mis en place le mandat d'arrêt européen qui permet
+                la remise d'un individu – entre pays membres. Il s'agit d'une forme de procédure d'extradition simplifiée, allégée et moins formelle.
+            </p>
+
+            <div class="bg-white border border-border-light p-8 mb-8">
+                <h4 class="font-condensed text-lg font-semibold text-text-dark mb-4">Conditions d'extradition en France</h4>
+                <p class="text-sm text-text-medium leading-relaxed mb-4">
+                    Comme de nombreux pays, la France n'extrade un individu que si certaines conditions sont respectées :
+                </p>
+                <ul class="text-sm text-text-medium space-y-3 list-disc list-inside">
+                    <li>Un national – c'est à dire un individu de nationalité française – ne peut être extradé vers un pays étranger</li>
+                    <li>Le pays n'extrade pas un individu pour un fait qui n'est pas passible d'une peine correctionnelle ou criminelle selon la loi française</li>
+                    <li>Dans le cas où l'individu n'ait pas encore été jugé, la France ne pourra l'extrader que si la somme des peines encourues est égale ou supérieure à deux ans</li>
+                    <li>Lorsque le crime reproché est un crime politique, la France peut choisir de ne pas extrader l'individu</li>
+                    <li>La France refuse d'extrader un individu qui a déjà été jugé par la justice française</li>
+                    <li>La peine de mort ayant été abolie en 1981, la France refuse d'extrader une personne qui serait menacée de peine capitale</li>
+                </ul>
+            </div>
+
+            <h4 class="font-condensed text-xl font-semibold text-text-dark mb-4 mt-10">Comment se déroule concrètement la procédure d'extradition ?</h4>
+
+            <p class="text-sm text-text-medium leading-relaxed mb-4">
+                Dans le cas où la France est l'État requis c'est le Ministère des Affaires Étrangères qui reçoit la demande d'extradition.
+                Il l'examine et la transmet au Ministère de la Justice s'il estime que la demande est complète.
+            </p>
+
+            <p class="text-sm text-text-medium leading-relaxed mb-4">
+                S'il valide la demande, le Garde des Sceaux transmet la demande d'extradition à la Chambre de l'Instruction de la Cour d'Appel
+                où se trouve le demandé. Ce dernier est alors informé de la demande et peut, ou non, s'y soumettre. S'il refuse de se plier à
+                cette demande d'extradition, la Chambre de l'Instruction examine la demande de l'Etat requérant et produit un avis positif ou négatif.
+            </p>
+
+            <p class="text-sm text-text-medium leading-relaxed mb-4">
+                En cas d'avis positif, c'est le Président de la République en personne qui signe – ou non – le décret d'extradition qui lui est
+                présenté par le Ministre de la Justice. Il est alors possible pour l'individu visé par la procédure d'extradition de présenter un
+                recours devant le Conseil d'État notamment en cas d'infractions politiques.
+            </p>
+
+            <p class="text-sm text-text-medium leading-relaxed font-medium">
+                Dans ce cas, le secours d'un avocat pénaliste qui intervient en droit pénal international est plus que conseillé afin de défendre
+                au mieux le refus d'extradition de l'individu.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+            <h2 class="font-condensed text-2xl font-semibold text-text-dark mb-6">Besoin d'un avocat pénaliste ?</h2>
+            <p class="text-sm text-text-medium leading-relaxed mb-8">
+                Contactez le Cabinet Georges Parastatis pour une consultation et bénéficiez d'une expertise reconnue en droit pénal et pénal international.
+            </p>
+            <a href="contact.html" class="inline-block bg-primary text-white px-8 py-3 text-xs uppercase tracking-wider font-medium hover:bg-blue-800 transition-colors duration-300">
+                Nous Contacter
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-dark text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="font-condensed text-lg font-semibold mb-4">Cabinet Georges Parastatis</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Avocat au barreau de Paris depuis 1997. Expertise en droit pénal, droit pénal international,
+                        responsabilité médicale et droit international de la famille.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-condensed text-lg font-semibold mb-4">Coordonnées</h3>
+                    <div class="text-xs text-gray-300 space-y-2">
+                        <p>89 Avenue de Villiers<br>75017 Paris<br>(Métro Wagram)</p>
+                        <p>Tél : <a href="tel:0144015859" class="hover:text-white">01 44 01 58 59</a></p>
+                        <p>Mobile : <a href="tel:0679602564" class="hover:text-white">06 79 60 25 64</a></p>
+                        <p>Email : <a href="mailto:ge@parastatisavocat.com" class="hover:text-white">ge@parastatisavocat.com</a></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-condensed text-lg font-semibold mb-4">Navigation</h3>
+                    <div class="text-xs text-gray-300 space-y-2">
+                        <p><a href="index.html" class="hover:text-white">Accueil</a></p>
+                        <p><a href="le-cabinet.html" class="hover:text-white">Le Cabinet</a></p>
+                        <p><a href="droit-penal.html" class="hover:text-white">Droit Pénal</a></p>
+                        <p><a href="droit-international-famille.html" class="hover:text-white">Droit International & Famille</a></p>
+                        <p><a href="responsabilite-medicale.html" class="hover:text-white">Responsabilité Médicale</a></p>
+                        <p><a href="presse.html" class="hover:text-white">Presse</a></p>
+                        <p><a href="contact.html" class="hover:text-white">Contact</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p class="text-xs text-gray-400">© 2026 Cabinet Georges Parastatis - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

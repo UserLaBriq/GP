@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
-    <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maître G. Parastatis - Avocat à Paris | Cabinet d'Avocats</title>
-    <meta name="description" content="Cabinet d'avocats Maître G. Parastatis à Paris. Expertise en droit pénal, droit international, droit médical et droit de la famille. Défense et conseil juridique d'excellence.">
-    <meta name="keywords" content="avocat Paris, cabinet d'avocats, droit pénal, droit international, droit médical, droit famille, G. Parastatis">
-    <meta name="author" content="Cabinet G. Parastatis">
-    
+    <meta name="description" content="Cabinet de Maître Georges Parastatis, avocat à Paris spécialisé en droit pénal, droit pénal international, responsabilité médicale et droit international de la famille.">
+    <meta name="keywords" content="avocat, Paris, droit pénal, extradition, mandat d'arrêt européen, responsabilité médicale, droit international famille">
+    <meta name="author" content="Cabinet Georges Parastatis">
+    <title>Cabinet Georges Parastatis - Avocat à Paris | Droit Pénal & International</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cabinet Georges Parastatis - Avocat à Paris">
+    <meta property="og:description" content="Avocat spécialisé en droit pénal, droit pénal international, responsabilité médicale et droit international de la famille.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,912 +25,340 @@
             theme: {
                 extend: {
                     colors: {
-                        'navy': '#0a192f',
-                        'charcoal': '#1e293b',
-                        'stone': '#475569',
-                        'cream': '#f8f5f0',
-                        'gold': '#b59a6a',
-                        'dark-gold': '#8b7355'
+                        'primary': '#8B0000',
+                        'text-dark': '#1F2937',
+                        'text-medium': '#6B7280',
+                        'border-light': '#E5E7EB',
                     },
                     fontFamily: {
-                        'cormorant': ['Cormorant Garamond', 'serif'],
-                        'montserrat': ['Montserrat', 'sans-serif']
+                        'condensed': ['"Roboto Condensed"', 'sans-serif'],
+                        'sans': ['"Open Sans"', 'sans-serif'],
                     },
-                    spacing: {
-                        '128': '32rem',
-                        '144': '36rem'
-                    }
                 }
             }
         }
     </script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="https://static.wixstatic.com/media/4c69f3_6caa337a18824d51b92e5cbdc7813f9b~mv2.jpg/v1/fill/w_64,h_64,al_c,q_85/GP_edited_edited.jpg">
-    
+    <link rel="stylesheet" href="assets/css/input.css">
+
     <style>
-        /* Custom styles for prestigious law firm */
-        body {
-            background-color: #f8f5f0;
-        }
-        
-        .nav-border {
-            border-bottom: 1px solid rgba(181, 154, 106, 0.2);
-        }
-        
-        .hero-overlay {
-            background: linear-gradient(to right, rgba(10, 25, 47, 0.9) 0%, rgba(10, 25, 47, 0.7) 100%);
-        }
-        
-        .section-divider {
-            border-bottom: 1px solid rgba(181, 154, 106, 0.3);
-        }
-        
-        .gold-divider {
-            width: 80px;
-            height: 2px;
-            background-color: #b59a6a;
-            margin: 2rem auto;
-        }
-        
-        .card-elegant {
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(181, 154, 106, 0.1);
-        }
-        
-        .card-elegant:hover {
-            transform: translateY(-5px);
-            border-color: rgba(181, 154, 106, 0.3);
-        }
-        
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .btn-gold {
-            background-color: #b59a6a;
-            color: #0a192f;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-gold:hover {
-            background-color: #8b7355;
+        /* Style du bouton */
+        #btnTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #333;
             color: white;
-        }
-        
-        .btn-outline-gold {
-            border: 2px solid #b59a6a;
-            color: #b59a6a;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-outline-gold:hover {
-            background-color: #b59a6a;
-            color: #0a192f;
-        }
-        
-        /* Typography */
-        .heading-serif {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-        }
-        
-        .body-sans {
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Elegant underline */
-        .underline-gold {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .underline-gold::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            bottom: -5px;
-            left: 0;
-            background-color: #b59a6a;
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .underline-gold:hover::after {
-            transform: scaleX(1);
-        }
-        
-        /* Mobile menu */
-        .mobile-menu {
-            backdrop-filter: blur(10px);
-            background-color: rgba(10, 25, 47, 0.95);
-        }
-        /* Mobile menu: robust on iOS/Android */
-        #mobile-menu {
-        height: 100dvh;               /* viewport height fiable mobile */
-        width: 100vw;
-        -webkit-overflow-scrolling: touch;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            display: none; /* Caché par défaut */
+            transition: opacity 0.3s, background-color 0.3s;
         }
 
+        #btnTop:hover {
+            background-color: #555;
+        }
     </style>
 </head>
-<body class="min-h-screen bg-cream font-montserrat text-charcoal">
+<body class="bg-white text-text-dark">
+
     <!-- Header -->
-    <header class="fixed w-full z-50 bg-navy/95 backdrop-blur-sm nav-border">
-        <div class="container mx-auto px-6">
-            <nav class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="#" class="flex items-center space-x-4" onclick="event.preventDefault(); scrollToTop()">
-                        <div class="w-10 h-10 border border-gold rounded-full flex items-center justify-center">
-                            <span class="text-gold font-cormorant font-bold text-lg">GP</span>
-                        </div>
-                        <div>
-                            <h1 class="text-xl font-cormorant font-semibold text-cream">G. Parastatis</h1>
-                            <p class="text-xs text-gold font-montserrat">Avocat à la Cour</p>
-                        </div>
+    <header class="bg-white border-b border-border-light sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-6 md:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Brand -->
+                <div>
+                    <a href="index.html">
+                        <img src="assets/images/GP_logo.avif" alt="Cabinet Georges Parastatis" class="h-12">
                     </a>
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-10">
-                    <a href="#accueil" class="text-cream hover:text-gold font-montserrat font-medium text-sm tracking-wide transition duration-300 underline-gold" onclick="event.preventDefault(); scrollToSection('hero')">Accueil</a>
-                    <a href="#cabinet" class="text-cream hover:text-gold font-montserrat font-medium text-sm tracking-wide transition duration-300 underline-gold" onclick="event.preventDefault(); scrollToSection('cabinet')">Le Cabinet</a>
-                    
-                    <!-- Practice Areas -->
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link active text-xs uppercase tracking-wider text-primary font-medium">Accueil</a>
+                    <a href="le-cabinet.html" class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium">Le Cabinet</a>
+
+                    <!-- Dropdown Domaines d'expertise -->
                     <div class="relative group">
-                        <button class="text-cream hover:text-gold font-montserrat font-medium text-sm tracking-wide flex items-center transition duration-300 underline-gold">
+                        <button class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
                             Domaines d'expertise
-                            <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-56 bg-navy border border-gold/20 rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <a href="#droit-penal" class="block px-4 py-3 hover:bg-gold/10 text-cream text-sm" onclick="event.preventDefault(); scrollToSection('droit-penal')">Droit Pénal</a>
-                            <a href="#droit-international" class="block px-4 py-3 hover:bg-gold/10 text-cream text-sm" onclick="event.preventDefault(); scrollToSection('droit-international')">Droit International</a>
-                            <a href="#droit-medical" class="block px-4 py-3 hover:bg-gold/10 text-cream text-sm" onclick="event.preventDefault(); scrollToSection('droit-medical')">Droit Médical</a>
-                            <a href="#droit-famille" class="block px-4 py-3 hover:bg-gold/10 text-cream text-sm" onclick="event.preventDefault(); scrollToSection('droit-famille')">Droit de la Famille</a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-border-light shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="droit-penal.html" class="block px-4 py-3 text-xs text-text-dark hover:bg-gray-50 hover:text-primary transition-colors">Droit Pénal</a>
+                            <a href="droit-international-famille.html" class="block px-4 py-3 text-xs text-text-dark hover:bg-gray-50 hover:text-primary transition-colors">Droit International & Famille</a>
+                            <a href="responsabilite-medicale.html" class="block px-4 py-3 text-xs text-text-dark hover:bg-gray-50 hover:text-primary transition-colors">Responsabilité Médicale</a>
                         </div>
                     </div>
-                    
-                    <a href="#presse" class="text-cream hover:text-gold font-montserrat font-medium text-sm tracking-wide transition duration-300 underline-gold" onclick="event.preventDefault(); scrollToSection('presse')">Presse</a>
-                    <a href="#contact" class="text-cream hover:text-gold font-montserrat font-medium text-sm tracking-wide transition duration-300 underline-gold" onclick="event.preventDefault(); scrollToSection('contact')">Contact</a>
-                    
-                    <!-- Language Selector -->
-                    <div class="flex items-center space-x-2 ml-4">
-                        <button class="text-gold text-sm font-medium">FR</button>
-                        <span class="text-gold/50">|</span>
-                        <button class="text-cream/70 hover:text-cream text-sm font-medium">EN</button>
-                    </div>
+
+                    <a href="presse.html" class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium">Presse</a>
+                    <a href="contact.html" class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="lg:hidden text-gold">
-                    <i class="fas fa-bars text-xl"></i>
+                <button id="mobile-menu-button" class="lg:hidden text-text-dark focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
-            </nav>
-        </div>
+            </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="mobile-menu lg:hidden fixed inset-0 z-[9999] opacity-0 invisible pointer-events-none transition-all duration-300 overflow-y-auto">
-            <div class="absolute right-6 top-6">
-                <button id="close-mobile-menu" class="text-gold text-2xl">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="flex flex-col items-center justify-center h-full px-6">
-                <div class="space-y-8 text-center">
-                    <a href="#accueil" class="block text-2xl font-cormorant text-cream hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('hero'); closeMobileMenu()">Accueil</a>
-                    <a href="#cabinet" class="block text-2xl font-cormorant text-cream hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('cabinet'); closeMobileMenu()">Le Cabinet</a>
-                    
-                    <div class="pt-4">
-                        <p class="text-gold font-montserrat text-sm tracking-widest mb-4">DOMAINES D'EXPERTISE</p>
-                        <div class="space-y-4">
-                            <a href="#droit-penal" class="block text-cream/90 hover:text-gold text-lg" onclick="event.preventDefault(); scrollToSection('droit-penal'); closeMobileMenu()">Droit Pénal</a>
-                            <a href="#droit-international" class="block text-cream/90 hover:text-gold text-lg" onclick="event.preventDefault(); scrollToSection('droit-international'); closeMobileMenu()">Droit International</a>
-                            <a href="#droit-medical" class="block text-cream/90 hover:text-gold text-lg" onclick="event.preventDefault(); scrollToSection('droit-medical'); closeMobileMenu()">Droit Médical</a>
-                            <a href="#droit-famille" class="block text-cream/90 hover:text-gold text-lg" onclick="event.preventDefault(); scrollToSection('droit-famille'); closeMobileMenu()">Droit de la Famille</a>
-                        </div>
-                    </div>
-                    
-                    <a href="#presse" class="block text-2xl font-cormorant text-cream hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('presse'); closeMobileMenu()">Presse</a>
-                    <a href="#contact" class="block text-2xl font-cormorant text-cream hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('contact'); closeMobileMenu()">Contact</a>
-                </div>
-                
-                <div class="absolute bottom-12">
-                    <div class="flex items-center space-x-4">
-                        <span class="text-gold font-medium">FR</span>
-                        <span class="text-gold/50">|</span>
-                        <span class="text-cream/70 font-medium">EN</span>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 space-y-3">
+                <a href="index.html" class="block text-xs uppercase tracking-wider text-primary font-medium">Accueil</a>
+                <a href="le-cabinet.html" class="block text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium">Le Cabinet</a>
+
+                <!-- Mobile Dropdown -->
+                <div>
+                    <button id="mobile-dropdown-toggle" class="w-full text-left text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium flex items-center justify-between">
+                        Domaines d'expertise
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="mobile-dropdown" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="droit-penal.html" class="block text-xs text-text-dark hover:text-primary transition-colors">Droit Pénal</a>
+                        <a href="droit-international-famille.html" class="block text-xs text-text-dark hover:text-primary transition-colors">Droit International & Famille</a>
+                        <a href="responsabilite-medicale.html" class="block text-xs text-text-dark hover:text-primary transition-colors">Responsabilité Médicale</a>
                     </div>
                 </div>
+
+                <a href="presse.html" class="block text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium">Presse</a>
+                <a href="contact.html" class="block text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium">Contact</a>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center">
-        <div class="absolute inset-0">
-            <img 
-                src="https://static.wixstatic.com/media/4c69f3_67cd7f56221a4d04aa8fdaa9cd78a15b~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85,enc_avif,quality_auto/IMG_1980_edited.jpg"
-                alt="Cabinet de Maître Georges Parastatis"
-                class="w-full h-full object-cover"
-                loading="eager"
-            />
-            <div class="absolute inset-0 hero-overlay"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-3xl">
-                <div class="mb-8">
-                    <span class="text-gold font-montserrat text-sm tracking-widest">CABINET D'AVOCATS</span>
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left: Content -->
+                <div class="order-1 lg:order-1 text-center">
+                    <h1 class="font-condensed text-2xl font-semibold text-text-dark mb-2">
+                        Cabinet G. Parastatis
+                    </h1>
+                    <p class="text-2xl font-condensed font-semibold text-primary mb-2">
+                        Avocat à la Cour
+                    </p>
+                    <p class="text-2xl font-condensed font-semibold text-text-dark mb-6">
+                        à Paris
+                    </p>
+
+                    <!-- Contact Info -->
+                    <div class="text-[10px] text-text-medium mb-4 space-y-1">
+                        <p>89 Avenue de Villiers, 75017 Paris</p>
+                        <p>Tél : 01 44 01 58 59 - 06 79 60 25 64</p>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-2 justify-center">
+                        <a
+                            href="#domaines"
+                            class="inline-block bg-primary text-white px-5 py-2 text-[10px] uppercase tracking-wide font-medium hover:bg-red-700 transition-colors duration-300 text-center rounded-md"
+                        >
+                            Domaines d'expertises
+                        </a>
+                        <a
+                            href="contact.html"
+                            class="inline-block bg-text-dark text-white px-5 py-2 text-[10px] uppercase tracking-wide font-medium hover:bg-gray-800 transition-colors duration-300 text-center rounded-md"
+                        >
+                            Prendre rendez-vous
+                        </a>
+                    </div>
                 </div>
-                
-                <h2 class="text-5xl md:text-6xl lg:text-7xl font-cormorant font-semibold text-cream mb-8 leading-tight text-shadow">
-                    Maître<br>
-                    <span class="text-gold">G. Parastatis</span>
-                </h2>
-                
-                <div class="gold-divider"></div>
-                
-                <p class="text-xl text-cream/90 font-montserrat mb-12 max-w-2xl">
-                    Plus de quinze années d'expertise juridique au service de la défense de vos droits. 
-                    Approche rigoureuse et discrète pour des solutions sur mesure.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="#contact" class="btn-gold px-8 py-4 rounded-none font-montserrat font-medium text-sm tracking-widest uppercase" onclick="event.preventDefault(); scrollToSection('contact')">
-                        Prendre rendez-vous
-                    </a>
-                    <a href="#cabinet" class="btn-outline-gold px-8 py-4 rounded-none font-montserrat font-medium text-sm tracking-widest uppercase" onclick="event.preventDefault(); scrollToSection('cabinet')">
-                        Découvrir le cabinet
-                    </a>
+
+                <!-- Right: Image -->
+                <div class="order-2 lg:order-2">
+                    <picture>
+                        <source srcset="assets/images/bureaureception1.avif" type="image/avif">
+                        <img
+                            src="assets/images/bureaureception1.avif"
+                            alt="Cabinet Georges Parastatis - Bureau de réception"
+                            class="w-full h-[400px] md:h-[500px] object-cover shadow-lg rounded-lg"
+                        >
+                    </picture>
                 </div>
+
             </div>
-        </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <a href="#expertise" onclick="event.preventDefault(); scrollToSection('expertise')">
-                <div class="animate-bounce">
-                    <i class="fas fa-chevron-down text-gold text-xl"></i>
-                </div>
-            </a>
         </div>
     </section>
 
-    <!-- Expertise Section -->
-    <section id="expertise" class="py-24 bg-cream">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20">
-                <span class="text-gold font-montserrat text-sm tracking-widest mb-4 block">EXCELLENCE JURIDIQUE</span>
-                <h2 class="text-4xl md:text-5xl font-cormorant font-semibold text-navy mb-6">Domaines d'expertise</h2>
-                <div class="gold-divider"></div>
-                <p class="text-stone max-w-2xl mx-auto font-montserrat">
-                    Spécialisations couvrant les principaux domaines du droit pour une défense complète et adaptée.
-                </p>
-            </div>
+    <!-- Introduction Section -->
+    <section class="py-12 md:py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 md:px-8">
+            <div class="bg-white rounded-lg shadow-sm border border-border-light p-8 md:p-10">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <!-- Photo -->
+                    <div class="flex-shrink-0">
+                        <picture>
+                            <source srcset="assets/images/photo_gp_tetebuste.avif" type="image/avif">
+                            <img
+                                src="assets/images/photo_gp_tetebuste.avif"
+                                alt="Maître Georges Parastatis"
+                                class="w-48 h-60 md:w-64 md:h-80 object-cover rounded border-2 border-border-light shadow-lg grayscale"
+                            >
+                        </picture>
+                    </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- Texte -->
+                    <div class="flex-1 flex items-center">
+                        <p class="text-sm md:text-base text-text-medium leading-relaxed text-center">
+                            Fondé en 1997, le Cabinet de Maître Georges Parastatis, avocat, intervient en matières de droit pénal,
+                            droit pénal international, responsabilité médicale et droit international de la famille.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domaines d'intervention -->
+    <section id="domaines" class="py-16 md:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 md:px-8">
+            <h2 class="font-condensed text-3xl font-semibold text-text-dark mb-12 text-center">Domaines d'intervention</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Droit Pénal -->
-                <div id="droit-penal" class="card-elegant bg-white p-10">
-                    <div class="flex items-start mb-6">
-                        <div class="w-12 h-12 border border-gold flex items-center justify-center mr-6">
-                            <i class="fas fa-balance-scale text-gold text-lg"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-cormorant font-semibold text-navy mb-2">Droit Pénal</h3>
-                            <span class="text-gold font-montserrat text-sm">Défense & Procédure</span>
-                        </div>
-                    </div>
-                    <p class="text-stone font-montserrat mb-6 leading-relaxed">
-                        Défense en matière criminelle et correctionnelle. Assistance lors des gardes à vue, 
-                        procédures complexes et recours. Stratégie de défense adaptée à chaque situation.
+                <div class="bg-white border border-border-light p-8 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="font-condensed text-xl font-semibold text-text-dark mb-3">Droit Pénal</h3>
+                    <p class="text-sm text-text-medium leading-relaxed">
+                        Affaires criminelles ou correctionnelles. Expertise reconnue en droit pénal général avec
+                        25 ans d'expérience.
                     </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Défense devant les tribunaux</span>
-                        </li>
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Assistance garde à vue</span>
-                        </li>
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Procédures d'appel</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="text-gold font-montserrat text-sm tracking-widest hover:underline inline-flex items-center" onclick="event.preventDefault(); scrollToSection('contact')">
-                        CONSULTATION
-                        <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
                 </div>
 
-                <!-- Droit International -->
-                <div id="droit-international" class="card-elegant bg-white p-10">
-                    <div class="flex items-start mb-6">
-                        <div class="w-12 h-12 border border-gold flex items-center justify-center mr-6">
-                            <i class="fas fa-globe-europe text-gold text-lg"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-cormorant font-semibold text-navy mb-2">Droit International</h3>
-                            <span class="text-gold font-montserrat text-sm">Affaires Transnationales</span>
-                        </div>
-                    </div>
-                    <p class="text-stone font-montserrat mb-6 leading-relaxed">
-                        Conflits de lois, droit des étrangers, extradition et entraide judiciaire internationale. 
-                        Expertise dans les dossiers complexes à dimension internationale.
+                <!-- Droit Pénal International -->
+                <div class="bg-white border border-border-light p-8 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="font-condensed text-xl font-semibold text-text-dark mb-3">Droit Pénal International</h3>
+                    <p class="text-sm text-text-medium leading-relaxed">
+                        Extradition, mandat d'arrêt international ou européen. Assistance d'une clientèle
+                        française et internationale.
                     </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Droit des étrangers</span>
-                        </li>
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Extradition</span>
-                        </li>
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Conflits de juridictions</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="text-gold font-montserrat text-sm tracking-widest hover:underline inline-flex items-center" onclick="event.preventDefault(); scrollToSection('contact')">
-                        CONSULTATION
-                        <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
                 </div>
 
-                <!-- Droit Médical -->
-                <div id="droit-medical" class="card-elegant bg-white p-10">
-                    <div class="flex items-start mb-6">
-                        <div class="w-12 h-12 border border-gold flex items-center justify-center mr-6">
-                            <i class="fas fa-user-md text-gold text-lg"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-cormorant font-semibold text-navy mb-2">Droit Médical</h3>
-                            <span class="text-gold font-montserrat text-sm">Responsabilité & Indemnisation</span>
-                        </div>
-                    </div>
-                    <p class="text-stone font-montserrat mb-6 leading-relaxed">
-                        Responsabilité médicale, indemnisation des victimes d'accidents médicaux et conseil 
-                        aux professionnels de santé. Expertise technique et juridique combinée.
+                <!-- Responsabilité Médicale -->
+                <div class="bg-white border border-border-light p-8 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="font-condensed text-xl font-semibold text-text-dark mb-3">Responsabilité Médicale</h3>
+                    <p class="text-sm text-text-medium leading-relaxed">
+                        Défense des victimes d'erreurs médicales, aléas thérapeutiques et infections nosocomiales.
+                        Procédures judiciaires et amiables.
                     </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Responsabilité médicale</span>
-                        </li>
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Indemnisation victimes</span>
-                        </li>
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Conseil aux professionnels</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="text-gold font-montserrat text-sm tracking-widest hover:underline inline-flex items-center" onclick="event.preventDefault(); scrollToSection('contact')">
-                        CONSULTATION
-                        <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
                 </div>
 
-                <!-- Droit de la Famille -->
-                <div id="droit-famille" class="card-elegant bg-white p-10">
-                    <div class="flex items-start mb-6">
-                        <div class="w-12 h-12 border border-gold flex items-center justify-center mr-6">
-                            <i class="fas fa-home text-gold text-lg"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-cormorant font-semibold text-navy mb-2">Droit de la Famille</h3>
-                            <span class="text-gold font-montserrat text-sm">Vie Privée & Successions</span>
-                        </div>
-                    </div>
-                    <p class="text-stone font-montserrat mb-6 leading-relaxed">
-                        Divorce, garde d'enfants, pension alimentaire, succession et adoption. 
-                        Approche discrète et solutions adaptées aux situations familiales complexes.
+                <!-- Droit International de la Famille -->
+                <div class="bg-white border border-border-light p-8 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="font-condensed text-xl font-semibold text-text-dark mb-3">Droit International de la Famille</h3>
+                    <p class="text-sm text-text-medium leading-relaxed">
+                        Divorces internationaux, enlèvement international d'enfants. Service bilingue français-anglais
+                        avec consultation à distance.
                     </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Divorce et séparation</span>
-                        </li>
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Garde d'enfants</span>
-                        </li>
-                        <li class="flex items-center text-stone font-montserrat">
-                            <i class="fas fa-minus text-gold mr-3"></i>
-                            <span>Successions</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="text-gold font-montserrat text-sm tracking-widest hover:underline inline-flex items-center" onclick="event.preventDefault(); scrollToSection('contact')">
-                        CONSULTATION
-                        <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="cabinet" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="relative">
-                    <div class="relative z-10">
-                        <img 
-                            src="https://static.wixstatic.com/media/4c69f3_e8bc456a401b4d68ae8942bfe08325f4~mv2.jpg/v1/crop/x_183,y_0,w_766,h_894/fill/w_600,h_800,al_c,q_85,enc_avif,quality_auto/Georges%20-%2013.jpg"
-                            alt="Maître Georges Parastatis"
-                            class="w-full"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 w-64 h-64 border border-gold bg-cream p-8 flex flex-col justify-center">
-                        <p class="text-4xl font-cormorant font-bold text-navy text-center">15+</p>
-                        <p class="text-gold font-montserrat text-sm tracking-widest text-center mt-2">ANNÉES D'EXPÉRIENCE</p>
-                    </div>
-                </div>
-                
-                <div>
-                    <span class="text-gold font-montserrat text-sm tracking-widest mb-4 block">LE CABINET</span>
-                    <h2 class="text-4xl md:text-5xl font-cormorant font-semibold text-navy mb-8">Maître G. Parastatis</h2>
-                    
-                    <div class="gold-divider" style="margin: 2rem 0;"></div>
-                    
-                    <p class="text-stone font-montserrat mb-8 leading-relaxed">
-                        Fondé il y a plus de quinze ans, le cabinet Maître G. Parastatis s'est imposé comme une référence 
-                        à Paris dans les domaines du droit pénal, international, médical et de la famille.
-                    </p>
-                    
-                    <p class="text-stone font-montserrat mb-10 leading-relaxed">
-                        Notre approche allie expertise juridique pointue et discrétion absolue. Chaque dossier est traité 
-                        avec une attention particulière, depuis la consultation initiale jusqu'à la résolution finale.
-                    </p>
-                    
-                    <div class="space-y-6 mb-10">
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 border border-gold flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-gavel text-gold"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-cormorant font-semibold text-navy mb-1">Expertise reconnue</h4>
-                                <p class="text-stone font-montserrat text-sm">Interventions dans des dossiers complexes et médiatisés</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 border border-gold flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-user-shield text-gold"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-cormorant font-semibold text-navy mb-1">Confidentialité absolue</h4>
-                                <p class="text-stone font-montserrat text-sm">Respect strict du secret professionnel et de la vie privée</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 border border-gold flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-handshake text-gold"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-cormorant font-semibold text-navy mb-1">Approche personnalisée</h4>
-                                <p class="text-stone font-montserrat text-sm">Stratégie sur mesure adaptée à chaque situation</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="btn-outline-gold px-8 py-4 rounded-none font-montserrat font-medium text-sm tracking-widest uppercase inline-flex items-center" onclick="event.preventDefault(); scrollToSection('contact')">
-                        Nous contacter
-                        <i class="fas fa-arrow-right ml-4"></i>
-                    </a>
-                </div>
-            </div>
+    <!-- Nos Valeurs -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6 md:px-8">
+            <h2 class="font-condensed text-3xl font-semibold text-text-dark mb-8 text-center">Nos Valeurs</h2>
+            <p class="text-sm text-text-medium leading-relaxed text-center mb-6">
+                La transparence, la confiance et la recherche permanente de l'excellence et de la qualité.
+            </p>
         </div>
     </section>
 
-    <!-- Press Section -->
-    <section id="presse" class="py-24 bg-cream">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20">
-                <span class="text-gold font-montserrat text-sm tracking-widest mb-4 block">ACTUALITÉS</span>
-                <h2 class="text-4xl md:text-5xl font-cormorant font-semibold text-navy mb-6">Presse & Publications</h2>
-                <div class="gold-divider"></div>
-                <p class="text-stone max-w-2xl mx-auto font-montserrat">
-                    Interventions et analyses juridiques de Maître G. Parastatis sur des questions d'actualité.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Press Item 1 -->
-                <div class="bg-white border border-gold/10 p-8 hover:border-gold/30 transition duration-300">
-                    <div class="mb-6">
-                        <span class="text-gold font-montserrat text-xs tracking-widest">LE MONDE JURIDIQUE • 15 MARS 2024</span>
-                    </div>
-                    <h3 class="text-2xl font-cormorant font-semibold text-navy mb-4">L'évolution du droit pénal international</h3>
-                    <p class="text-stone font-montserrat mb-6 leading-relaxed">
-                        Analyse des récentes évolutions législatives et leur impact sur les procédures transnationales.
-                    </p>
-                    <a href="#" class="text-gold font-montserrat text-sm tracking-widest hover:underline inline-flex items-center" onclick="event.preventDefault()">
-                        LIRE L'ARTICLE
-                        <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-
-                <!-- Press Item 2 -->
-                <div class="bg-white border border-gold/10 p-8 hover:border-gold/30 transition duration-300">
-                    <div class="mb-6">
-                        <span class="text-gold font-montserrat text-xs tracking-widest">FRANCE 2 • 10 FÉVRIER 2024</span>
-                    </div>
-                    <h3 class="text-2xl font-cormorant font-semibold text-navy mb-4">Responsabilité médicale : nouveaux enjeux</h3>
-                    <p class="text-stone font-montserrat mb-6 leading-relaxed">
-                        Débat sur les réformes en cours concernant la responsabilité des professionnels de santé.
-                    </p>
-                    <a href="#" class="text-gold font-montserrat text-sm tracking-widest hover:underline inline-flex items-center" onclick="event.preventDefault()">
-                        VOIR L'INTERVIEW
-                        <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-
-                <!-- Press Item 3 -->
-                <div class="bg-white border border-gold/10 p-8 hover:border-gold/30 transition duration-300">
-                    <div class="mb-6">
-                        <span class="text-gold font-montserrat text-xs tracking-widest">REVUE DE DROIT FAMILIAL • 5 JANVIER 2024</span>
-                    </div>
-                    <h3 class="text-2xl font-cormorant font-semibold text-navy mb-4">Garde alternée : aspects pratiques</h3>
-                    <p class="text-stone font-montserrat mb-6 leading-relaxed">
-                        Guide pratique sur la mise en place et les implications de la garde alternée.
-                    </p>
-                    <a href="#" class="text-gold font-montserrat text-sm tracking-widest hover:underline inline-flex items-center" onclick="event.preventDefault()">
-                        CONSULTER
-                        <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-navy text-cream">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div>
-                    <span class="text-gold font-montserrat text-sm tracking-widest mb-4 block">CONTACT</span>
-                    <h2 class="text-4xl md:text-5xl font-cormorant font-semibold text-cream mb-8">Prendre rendez-vous</h2>
-                    
-                    <div class="gold-divider" style="margin: 2rem 0; background-color: #b59a6a;"></div>
-                    
-                    <p class="text-cream/80 font-montserrat mb-10 leading-relaxed">
-                        Pour toute demande de consultation ou renseignement, le cabinet est à votre disposition. 
-                        Une première consultation peut être organisée dans un délai de 48 heures.
-                    </p>
-                    
-                    <div class="space-y-8 mb-12">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 border border-gold flex items-center justify-center mr-6 flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-gold"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-cormorant font-semibold text-cream mb-2">Adresse du cabinet</h4>
-                                <p class="text-cream/80 font-montserrat">123 Avenue des Champs-Élysées<br>75008 Paris, France</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 border border-gold flex items-center justify-center mr-6 flex-shrink-0">
-                                <i class="fas fa-phone-alt text-gold"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-cormorant font-semibold text-cream mb-2">Téléphone</h4>
-                                <p class="text-cream/80 font-montserrat">+33 1 23 45 67 89</p>
-                                <p class="text-cream/60 font-montserrat text-sm mt-1">Lun-Ven: 9h-19h | Sam: 9h-13h</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 border border-gold flex items-center justify-center mr-6 flex-shrink-0">
-                                <i class="fas fa-envelope text-gold"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-cormorant font-semibold text-cream mb-2">Email</h4>
-                                <p class="text-cream/80 font-montserrat">contact@gparastatis-avocat.com</p>
-                                <p class="text-cream/60 font-montserrat text-sm mt-1">Réponse sous 24h ouvrées</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="border border-gold/30 p-8">
-                        <h4 class="font-cormorant font-semibold text-cream mb-4">Urgences pénales</h4>
-                        <p class="text-cream/80 font-montserrat mb-4 text-sm">
-                            Pour les situations urgentes (garde à vue, interpellation), un numéro dédié est disponible 24h/24.
-                        </p>
-                        <div class="flex items-center">
-                            <i class="fas fa-exclamation-circle text-gold mr-3"></i>
-                            <span class="font-montserrat font-medium text-cream">Urgences: +33 6 12 34 56 78</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-charcoal p-10 border border-gold/10">
-                    <h3 class="text-2xl font-cormorant font-semibold text-cream mb-8">Demande de consultation</h3>
-                    
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="firstname" class="block text-cream/80 font-montserrat text-sm mb-2">Prénom *</label>
-                                <input type="text" id="firstname" name="firstname" required 
-                                       class="w-full px-4 py-3 bg-navy border border-gold/20 text-cream focus:outline-none focus:border-gold font-montserrat">
-                            </div>
-                            <div>
-                                <label for="lastname" class="block text-cream/80 font-montserrat text-sm mb-2">Nom *</label>
-                                <input type="text" id="lastname" name="lastname" required 
-                                       class="w-full px-4 py-3 bg-navy border border-gold/20 text-cream focus:outline-none focus:border-gold font-montserrat">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label for="email" class="block text-cream/80 font-montserrat text-sm mb-2">Email *</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 bg-navy border border-gold/20 text-cream focus:outline-none focus:border-gold font-montserrat">
-                        </div>
-                        
-                        <div>
-                            <label for="phone" class="block text-cream/80 font-montserrat text-sm mb-2">Téléphone</label>
-                            <input type="tel" id="phone" name="phone" 
-                                   class="w-full px-4 py-3 bg-navy border border-gold/20 text-cream focus:outline-none focus:border-gold font-montserrat">
-                        </div>
-                        
-                        <div>
-                            <label for="subject" class="block text-cream/80 font-montserrat text-sm mb-2">Domaine concerné *</label>
-                            <select id="subject" name="subject" required 
-                                    class="w-full px-4 py-3 bg-navy border border-gold/20 text-cream focus:outline-none focus:border-gold font-montserrat">
-                                <option value="">Sélectionnez un domaine</option>
-                                <option value="penal">Droit Pénal</option>
-                                <option value="international">Droit International</option>
-                                <option value="medical">Droit Médical</option>
-                                <option value="famille">Droit de la Famille</option>
-                                <option value="autre">Autre domaine</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block text-cream/80 font-montserrat text-sm mb-2">Message *</label>
-                            <textarea id="message" name="message" rows="5" required 
-                                      class="w-full px-4 py-3 bg-navy border border-gold/20 text-cream focus:outline-none focus:border-gold font-montserrat"></textarea>
-                        </div>
-                        
-                        <div class="pt-4">
-                            <button type="submit" class="btn-gold w-full py-4 rounded-none font-montserrat font-medium text-sm tracking-widest uppercase">
-                                Envoyer la demande
-                            </button>
-                        </div>
-                        
-                        <p class="text-cream/60 font-montserrat text-xs text-center">
-                            Vos informations sont traitées avec la plus stricte confidentialité.
-                        </p>
-                    </form>
-                </div>
-            </div>
+    <!-- Notre Approche -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6 md:px-8">
+            <h2 class="font-condensed text-3xl font-semibold text-text-dark mb-8 text-center">Notre Approche</h2>
+            <p class="text-sm text-text-medium leading-relaxed text-center">
+                Le cabinet met son expérience à votre service afin de proposer une stratégie adéquate pour votre litige
+                et vous proposer des solutions concrètes et adaptées à vos attentes. Ensemble, avec Maître Georges Parastatis,
+                vous définirez une stratégie juridique ou judiciaire, puis la mettrez en œuvre de façon suivie et convenue.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-charcoal py-12 border-t border-gold/10">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer class="bg-text-dark text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- Cabinet -->
                 <div>
-                    <div class="flex items-center space-x-4 mb-6">
-                        <div class="w-10 h-10 border border-gold rounded-full flex items-center justify-center">
-                            <span class="text-gold font-cormorant font-bold">GP</span>
-                        </div>
-                        <div>
-                            <h4 class="font-cormorant font-semibold text-cream">G. Parastatis</h4>
-                            <p class="text-cream/60 font-montserrat text-xs">Avocat à la Cour</p>
-                        </div>
-                    </div>
-                    <p class="text-cream/70 font-montserrat text-sm">
-                        Cabinet d'avocats spécialisé à Paris depuis plus de quinze ans.
+                    <h3 class="font-condensed text-lg font-semibold mb-4">Cabinet Georges Parastatis</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Avocat au barreau de Paris depuis 1997. Expertise en droit pénal, droit pénal international,
+                        responsabilité médicale et droit international de la famille.
                     </p>
                 </div>
-                
+
+                <!-- Coordonnées -->
                 <div>
-                    <h5 class="font-cormorant font-semibold text-cream mb-6">Domaines d'expertise</h5>
-                    <ul class="space-y-3">
-                        <li><a href="#droit-penal" class="text-cream/70 font-montserrat text-sm hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('droit-penal')">Droit Pénal</a></li>
-                        <li><a href="#droit-international" class="text-cream/70 font-montserrat text-sm hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('droit-international')">Droit International</a></li>
-                        <li><a href="#droit-medical" class="text-cream/70 font-montserrat text-sm hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('droit-medical')">Droit Médical</a></li>
-                        <li><a href="#droit-famille" class="text-cream/70 font-montserrat text-sm hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('droit-famille')">Droit de la Famille</a></li>
-                    </ul>
+                    <h3 class="font-condensed text-lg font-semibold mb-4">Coordonnées</h3>
+                    <div class="text-xs text-gray-300 space-y-2">
+                        <p>89 Avenue de Villiers<br>75017 Paris<br>(Métro Wagram)</p>
+                        <p>Tél : <a href="tel:0144015859" class="hover:text-white">01 44 01 58 59</a></p>
+                        <p>Mobile : <a href="tel:0679602564" class="hover:text-white">06 79 60 25 64</a></p>
+                        <p>Email : <a href="mailto:ge@parastatisavocat.com" class="hover:text-white">ge@parastatisavocat.com</a></p>
+                    </div>
                 </div>
-                
+
+                <!-- Navigation -->
                 <div>
-                    <h5 class="font-cormorant font-semibold text-cream mb-6">Le Cabinet</h5>
-                    <ul class="space-y-3">
-                        <li><a href="#cabinet" class="text-cream/70 font-montserrat text-sm hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('cabinet')">Présentation</a></li>
-                        <li><a href="#presse" class="text-cream/70 font-montserrat text-sm hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('presse')">Presse</a></li>
-                        <li><a href="#contact" class="text-cream/70 font-montserrat text-sm hover:text-gold transition duration-300" onclick="event.preventDefault(); scrollToSection('contact')">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h5 class="font-cormorant font-semibold text-cream mb-6">Informations légales</h5>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-cream/70 font-montserrat text-sm hover:text-gold transition duration-300" onclick="event.preventDefault()">Mentions légales</a></li>
-                        <li><a href="#" class="text-cream/70 font-montserrat text-sm hover:text-gold transition duration-300" onclick="event.preventDefault()">Politique de confidentialité</a></li>
-                        <li><a href="#" class="text-cream/70 font-montserrat text-sm hover:text-gold transition duration-300" onclick="event.preventDefault()">CGU</a></li>
-                    </ul>
+                    <h3 class="font-condensed text-lg font-semibold mb-4">Navigation</h3>
+                    <div class="text-xs text-gray-300 space-y-2">
+                        <p><a href="index.html" class="hover:text-white">Accueil</a></p>
+                        <p><a href="le-cabinet.html" class="hover:text-white">Le Cabinet</a></p>
+                        <p><a href="droit-penal.html" class="hover:text-white">Droit Pénal</a></p>
+                        <p><a href="droit-international-famille.html" class="hover:text-white">Droit International & Famille</a></p>
+                        <p><a href="responsabilite-medicale.html" class="hover:text-white">Responsabilité Médicale</a></p>
+                        <p><a href="presse.html" class="hover:text-white">Presse</a></p>
+                        <p><a href="contact.html" class="hover:text-white">Contact</a></p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gold/10 mt-12 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-cream/60 font-montserrat text-sm">
-                        © 2026 Cabinet G. Parastatis. Tous droits réservés.
-                    </p>
-                    <p class="text-cream/60 font-montserrat text-sm mt-4 md:mt-0">
-                        Inscrit au Barreau de Paris - SIRET: XXX XXX XXX XXXXX
-                    </p>
-                </div>
+
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p class="text-xs text-gray-400">© 2026 Cabinet Georges Parastatis - Tous droits réservés</p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+
+    <!-- Le bouton retour en haut -->
+    <button id="btnTop" title="Retour en haut">↑</button>
+
     <script>
-        // Define data at the beginning
-        const practiceAreas = [
-            { "id": "penal", "title": "Droit Pénal", "icon": "fa-balance-scale" },
-            { "id": "international", "title": "Droit International", "icon": "fa-globe-europe" },
-            { "id": "medical", "title": "Droit Médical", "icon": "fa-user-md" },
-            { "id": "famille", "title": "Droit de la Famille", "icon": "fa-home" }
-        ];
+        // Récupérer le bouton
+        const btnTop = document.getElementById("btnTop");
 
-        const pressItems = [
-            { "id": 1, "source": "Le Monde Juridique", "date": "15 Mars 2024", "title": "L'évolution du droit pénal international" },
-            { "id": 2, "source": "France 2", "date": "10 Février 2024", "title": "Responsabilité médicale : nouveaux enjeux" },
-            { "id": 3, "source": "Revue de Droit Familial", "date": "5 Janvier 2024", "title": "Garde alternée : aspects pratiques" }
-        ];
-
-        // Mobile menu functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        function openMobileMenu() {
-            mobileMenu.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
-            mobileMenu.classList.add('opacity-100', 'visible', 'pointer-events-auto');
-            document.documentElement.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-            mobileMenu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
-            mobileMenu.classList.add('opacity-0', 'invisible', 'pointer-events-none');
-            document.documentElement.style.overflow = '';
-            document.body.style.overflow = '';
-        }
-
-
-        mobileMenuButton.addEventListener('click', openMobileMenu);
-        closeMobileMenuButton.addEventListener('click', closeMobileMenu);
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 1024) closeMobileMenu(); // lg breakpoint
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
-        });
-
-        // Smooth scrolling
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const sectionPosition = section.offsetTop - headerHeight;
-                window.scrollTo({
-                    top: sectionPosition,
-                    behavior: 'smooth'
-                });
+        // Afficher le bouton quand on scroll vers le bas
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnTop.style.display = "block";
+            } else {
+                btnTop.style.display = "none";
             }
-        }
+        };
 
-        function scrollToTop() {
+        // Remonter en haut quand on clique
+        btnTop.onclick = function() {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: 'smooth' // Animation fluide
             });
-        }
-
-        // Form submission
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form data
-                const formData = new FormData(this);
-                const data = Object.fromEntries(formData);
-                
-                // In a real application, you would send this data to a server
-                console.log('Form submitted:', data);
-                
-                // Show success message
-                alert('Votre demande a été envoyée. Nous vous contacterons dans les plus brefs délais.');
-                
-                // Reset form
-                this.reset();
-            });
-        }
-
-        // Language switching (simplified)
-        document.querySelectorAll('[data-lang]').forEach(button => {
-            button.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                // In a real application, this would load the appropriate language content
-                console.log('Switching to language:', lang);
-                
-                // Update active state
-                document.querySelectorAll('.language-switch').forEach(btn => {
-                    btn.classList.remove('active', 'bg-white', 'text-primary');
-                    btn.classList.add('bg-white', 'text-primary');
-                });
-                
-                this.classList.add('active', 'bg-primary', 'text-white');
-                this.classList.remove('bg-white', 'text-primary');
-            });
-        });
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.classList.add('shadow-lg');
-            } else {
-                header.classList.remove('shadow-lg');
-            }
-        });
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add active class to current section in navigation
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            window.addEventListener('scroll', function() {
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (scrollY >= (sectionTop - 200)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('text-gold');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('text-gold');
-                    }
-                });
-            });
-        });
+        };
     </script>
 </body>
 </html>

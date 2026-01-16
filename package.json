@@ -1,0 +1,15 @@
+{
+  "name": "cabinet-parastatis",
+  "version": "1.0.0",
+  "description": "Site web du Cabinet Georges Parastatis, Avocat",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --minify",
+    "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --watch"
+  },
+  "keywords": ["avocat", "droit-penal", "droit-international"],
+  "author": "Cabinet Georges Parastatis",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
