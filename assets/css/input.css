@@ -53,4 +53,21 @@
   .container-custom {
     @apply max-w-container mx-auto px-6 md:px-8;
   }
+
+  .hero {
+    @apply relative overflow-hidden bg-white;
+  }
+
+  .hero::before {
+    content: "";
+    @apply absolute inset-0 bg-center bg-cover bg-no-repeat;
+    background-image: url("../images/paris_bck.avif");
+    filter: grayscale(100%) contrast(1.08);
+    opacity: 0.12; /* ajuste 0.06 à 0.14 */
+    z-index: 0;
+  }
+
+  .hero-content {
+    @apply relative z-10;
+  }
 }

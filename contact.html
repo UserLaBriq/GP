@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Condensed:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,12 +19,14 @@
             theme: {
                 extend: {
                     colors: {
+                        'inter': ['"Inter"', 'sans-serif'],
                         'primary': '#8B0000',
                         'text-dark': '#1F2937',
                         'text-medium': '#6B7280',
                         'border-light': '#E5E7EB',
                     },
                     fontFamily: {
+                        'inter': ['"Inter"', 'sans-serif'],
                         'condensed': ['"Roboto Condensed"', 'sans-serif'],
                         'sans': ['"Open Sans"', 'sans-serif'],
                     },
@@ -34,7 +36,7 @@
     </script>
     <link rel="stylesheet" href="assets/css/input.css">
 </head>
-<body class="bg-white text-text-dark">
+<body class="bg-white text-text-dark font-inter">
 
     <!-- Header -->
     <header class="bg-white border-b border-border-light sticky top-0 z-50">
@@ -43,7 +45,7 @@
                 <!-- Logo/Brand -->
                 <div>
                     <a href="index.html">
-                        <img src="assets/images/GP_logo.avif" alt="Cabinet Georges Parastatis" class="h-12">
+                        <img src="assets/images/GP_logo.avif" alt="Cabinet Georges Parastatis" class="h-16">
                     </a>
                 </div>
 
@@ -68,7 +70,7 @@
                     </div>
 
                     <a href="presse.html" class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium">Presse</a>
-                    <a href="contact.html" class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium">Contact</a>
+                    <a href="contact.html" class="nav-link active text-xs uppercase tracking-wider text-primary font-medium">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -100,7 +102,7 @@
                 </div>
 
                 <a href="presse.html" class="block text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium">Presse</a>
-                <a href="contact.html" class="block text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors font-medium">Contact</a>
+                <a href="contact.html" class="block text-xs uppercase tracking-wider text-primary font-medium">Contact</a>
             </div>
         </nav>
     </header>

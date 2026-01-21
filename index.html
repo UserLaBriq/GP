@@ -6,7 +6,7 @@
     <meta name="description" content="Cabinet de Maître Georges Parastatis, avocat à Paris spécialisé en droit pénal, droit pénal international, responsabilité médicale et droit international de la famille.">
     <meta name="keywords" content="avocat, Paris, droit pénal, extradition, mandat d'arrêt européen, responsabilité médicale, droit international famille">
     <meta name="author" content="Cabinet Georges Parastatis">
-    <title>Cabinet Georges Parastatis - Avocat à Paris | Droit Pénal & International</title>
+    <title>Cabinet Georges Parastatis - Avocat à Paris</title>
 
     <!-- Open Graph -->
     <meta property="og:title" content="Cabinet Georges Parastatis - Avocat à Paris">
@@ -16,7 +16,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Condensed:wght@400;600;700&family=Open+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,6 +31,7 @@
                         'border-light': '#E5E7EB',
                     },
                     fontFamily: {
+                        'inter': ['"Inter"', 'sans-serif'],
                         'condensed': ['"Roboto Condensed"', 'sans-serif'],
                         'sans': ['"Open Sans"', 'sans-serif'],
                     },
@@ -38,9 +39,32 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="assets/css/input.css">
 
     <style>
+        /* Hero background */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("assets/images/paris_bck.avif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: grayscale(100%) contrast(1.08);
+            opacity: 0.12;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
         /* Style du bouton */
         #btnTop {
             position: fixed;
@@ -64,7 +88,7 @@
         }
     </style>
 </head>
-<body class="bg-white text-text-dark">
+<body class="bg-white text-text-dark font-inter">
 
     <!-- Header -->
     <header class="bg-white border-b border-border-light sticky top-0 z-50">
@@ -73,13 +97,13 @@
                 <!-- Logo/Brand -->
                 <div>
                     <a href="index.html">
-                        <img src="assets/images/GP_logo.avif" alt="Cabinet Georges Parastatis" class="h-12">
+                        <img src="assets/images/GP_logo.avif" alt="Cabinet Georges Parastatis" class="h-16">
                     </a>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex space-x-8 items-center">
-                    <a href="index.html" class="nav-link active text-xs uppercase tracking-wider text-primary font-medium">Accueil</a>
+                    <a href="index.html" class="nav-link active text-xs uppercase tracking-wider text-primary font-medium ">Accueil</a>
                     <a href="le-cabinet.html" class="nav-link text-xs uppercase tracking-wider text-text-dark hover:text-primary transition-colors duration-300 font-medium">Le Cabinet</a>
 
                     <!-- Dropdown Domaines d'expertise -->
@@ -136,55 +160,42 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="py-16 md:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <section class="hero py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 hero-content">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                 <!-- Left: Content -->
                 <div class="order-1 lg:order-1 text-center">
-                    <h1 class="font-condensed text-2xl font-semibold text-text-dark mb-2">
+                    <h1 class="text-lg font-semibold text-text-dark">
                         Cabinet G. Parastatis
                     </h1>
-                    <p class="text-2xl font-condensed font-semibold text-primary mb-2">
+                    <p class="text-lg font-semibold text-primary">
                         Avocat à la Cour
                     </p>
-                    <p class="text-2xl font-condensed font-semibold text-text-dark mb-6">
+                    <p class="text-lg font-semibold text-text-dark mb-2">
                         à Paris
                     </p>
 
                     <!-- Contact Info -->
                     <div class="text-[10px] text-text-medium mb-4 space-y-1">
                         <p>89 Avenue de Villiers, 75017 Paris</p>
-                        <p>Tél : 01 44 01 58 59 - 06 79 60 25 64</p>
+                        <p>01 44 01 58 59 - 06 79 60 25 64</p>
                     </div>
 
                     <!-- Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-2 justify-center">
-                        <a
-                            href="#domaines"
-                            class="inline-block bg-primary text-white px-5 py-2 text-[10px] uppercase tracking-wide font-medium hover:bg-red-700 transition-colors duration-300 text-center rounded-md"
-                        >
-                            Domaines d'expertises
-                        </a>
-                        <a
-                            href="contact.html"
-                            class="inline-block bg-text-dark text-white px-5 py-2 text-[10px] uppercase tracking-wide font-medium hover:bg-gray-800 transition-colors duration-300 text-center rounded-md"
-                        >
+                    <div class="flex justify-center">
+                        <a href="contact.html" class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 text-[12px] tracking-wide hover:bg-red-700 transition-colors duration-300 rounded-md">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                             Prendre rendez-vous
                         </a>
                     </div>
                 </div>
 
-                <!-- Right: Image -->
-                <div class="order-2 lg:order-2">
-                    <picture>
-                        <source srcset="assets/images/bureaureception1.avif" type="image/avif">
-                        <img
-                            src="assets/images/bureaureception1.avif"
-                            alt="Cabinet Georges Parastatis - Bureau de réception"
-                            class="w-full h-[400px] md:h-[500px] object-cover shadow-lg rounded-lg"
-                        >
-                    </picture>
+                <!-- Right: Initiales GP -->
+                <div class="order-2 lg:order-2 flex items-center justify-center h-[400px] md:h-[500px]">
+                    <div class="text-center">
+                        <span class="text-[200px] md:text-[400px] font-bold text-primary/90 leading-none tracking-tighter" style="font-family: 'Cormorant Garamond', serif;">GP</span>
+                    </div>
                 </div>
 
             </div>
