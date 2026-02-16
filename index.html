@@ -25,15 +25,16 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#8B0000',
+                        'primary': '#B91C1C',
+                        'primary-dark': '#991B1B',
+                        'navy': '#1e3a5f',
                         'text-dark': '#1F2937',
                         'text-medium': '#6B7280',
                         'border-light': '#E5E7EB',
                     },
                     fontFamily: {
-                        'inter': ['"Inter"', 'sans-serif'],
-                        'condensed': ['"Roboto Condensed"', 'sans-serif'],
-                        'sans': ['"Open Sans"', 'sans-serif'],
+                        'serif': ['"Cormorant Garamond"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
                     },
                 }
             }
@@ -41,28 +42,16 @@
     </script>
 
     <style>
-        /* Hero background */
+        /* Hero section */
         .hero {
+            background-color: #f5f5f5;
             position: relative;
             overflow: hidden;
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: url("assets/images/paris_bck.avif");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            filter: grayscale(100%) contrast(1.08);
-            opacity: 0.12;
-            z-index: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
+        /* Fluid typography for smooth scaling - stays stable until very large screens */
+        .fluid-hero-text {
+            font-size: clamp(1.5rem, 0.8rem + 0.58vw, 2.5rem);
         }
 
         /* Style du bouton */
@@ -71,7 +60,7 @@
             bottom: 30px;
             right: 30px;
             z-index: 99;
-            background-color: #333;
+            background-color: #B91C1C;
             color: white;
             border: none;
             border-radius: 50%;
@@ -79,20 +68,28 @@
             height: 50px;
             font-size: 20px;
             cursor: pointer;
-            display: none; /* Caché par défaut */
-            transition: opacity 0.3s, background-color 0.3s;
+            display: none;
+            transition: all 0.3s ease;
         }
 
         #btnTop:hover {
-            background-color: #555;
+            background-color: #991B1B;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive diagonal image */
+        @media (max-width: 768px) {
+            .diagonal-image {
+                display: none;
+            }
         }
     </style>
 </head>
 <body class="bg-white text-text-dark font-inter">
 
     <!-- Header -->
-    <header class="bg-white border-b border-border-light sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-6 md:px-8 py-4">
+    <header id="header" class="bg-white border-b border-border-light sticky top-0 z-50 transition-shadow duration-300">
+        <nav class="max-w-7xl mx-auto px-6 md:px-8 py-5">
             <div class="flex justify-between items-center">
                 <!-- Logo/Brand -->
                 <div>
@@ -159,31 +156,54 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero py-16 md:py-24">
-        <div class="max-w-7xl mx-auto px-6 md:px-8 hero-content">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-                <!-- Left: Content -->
-                <div class="order-1 lg:order-1 text-center">
-                    <h1 class="text-lg font-semibold text-text-dark">
-                        Cabinet G. Parastatis
+    
+    <section class="hero min-h-screen relative">
+        <div class="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-8">
+            <div class="relative z-10 flex flex-col items-center lg:flex-row items-center gap-10 lg:gap-16">
+                
+                <div class="order-2 lg:order-1 flex-1 flex-1 flex flex-col text-center px-4 border-4space-y-6">
+                    <div class="order-1 lg:order-3 text-[10px] text-text-medium mb-4 space-y-1">
+                        <p>89 Avenue de Villiers, 75017 Paris - 01 44 01 58 59</p>
+                    </div> 
+                    <h1 class="order-2 lg:order-1 fluid-hero-text font-semibold text-text-dark">
+                        Georges Parastatis
                     </h1>
-                    <p class="text-lg font-semibold text-primary">
+                    <p class="order-3 lg:order-2 fluid-hero-text font-bold text-primary mb-3">
                         Avocat à la Cour
                     </p>
-                    <p class="text-lg font-semibold text-text-dark mb-2">
-                        à Paris
+                    <div class="order-4 flex justify-center lg:justify-center">
+                        <a href="contact.html" class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 text-[12px] tracking-wide hover:bg-red-700 transition-colors duration-300 rounded-md">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            Contact
+                        </a>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 flex-1">
+                    <image class="w-full max-w-sm mx-auto lg:max-w-none" src="assets/images/escalier.png" alt="Cabinet Georges Parastatis"></image>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section -->
+    <!-- <section class="hero min-h-screen relative">
+        <div class="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
+                
+                <div class="order-2 lg:order-1 text-center lg:text-center">
+                    <h1 class="fluid-hero-text font-semibold text-text-dark">
+                        Georges Parastatis
+                    </h1>
+                    <p class="fluid-hero-text font-bold text-primary mb-3">
+                        Avocat à la Cour
                     </p>
 
-                    <!-- Contact Info -->
                     <div class="text-[10px] text-text-medium mb-4 space-y-1">
-                        <p>89 Avenue de Villiers, 75017 Paris</p>
-                        <p>01 44 01 58 59 - 06 79 60 25 64</p>
+                        <p>89 Avenue de Villiers, 75017 Paris - 01 44 01 58 59 - 06 79 60 25 64</p>
                     </div>
 
-                    <!-- Buttons -->
-                    <div class="flex justify-center">
+                    <div class="flex justify-center lg:justify-center">
                         <a href="contact.html" class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 text-[12px] tracking-wide hover:bg-red-700 transition-colors duration-300 rounded-md">
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                             Prendre rendez-vous
@@ -191,21 +211,28 @@
                     </div>
                 </div>
 
-                <!-- Right: Initiales GP -->
-                <div class="order-2 lg:order-2 flex items-center justify-center h-[400px] md:h-[500px]">
-                    <div class="text-center">
-                        <span class="text-[200px] md:text-[400px] font-bold text-primary/90 leading-none tracking-tighter" style="font-family: 'Cormorant Garamond', serif;">GP</span>
+                <div class="order-1 lg:order-2 mb-10 lg:mb-0 lg:block">
+                    <div class="hero-stripes">
+                        <div class="hero-stripe">
+                            <img src="assets/images/bureaureception1.avif" alt="">
+                        </div>
+                        <div class="hero-stripe">
+                            <img src="assets/images/bureaureception2.avif" alt="">
+                        </div>
+                        <div class="hero-stripe">
+                            <img src="assets/images/accueil.avif" alt="">
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Introduction Section -->
     <section class="py-12 md:py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-6 md:px-8">
-            <div class="bg-white rounded-lg shadow-sm border border-border-light p-8 md:p-10">
+            <div class="bg-white shadow-sm border border-bor der-light p-8 md:p-10">
                 <div class="flex flex-col md:flex-row gap-8 items-center">
                     <!-- Photo -->
                     <div class="flex-shrink-0">
@@ -214,14 +241,14 @@
                             <img
                                 src="assets/images/photo_gp_tetebuste.avif"
                                 alt="Maître Georges Parastatis"
-                                class="w-48 h-60 md:w-64 md:h-80 object-cover rounded border-2 border-border-light shadow-lg grayscale"
+                                class="w-48 h-60 md:w-64 md:h-80 object-cover shadow-lg grayscale"
                             >
                         </picture>
                     </div>
 
                     <!-- Texte -->
                     <div class="flex-1 flex items-center">
-                        <p class="text-sm md:text-base text-text-medium leading-relaxed text-center">
+                        <p class="text-sm md:text-base text-text-medium leading-relaxed">
                             Fondé en 1997, le Cabinet de Maître Georges Parastatis, avocat, intervient en matières de droit pénal,
                             droit pénal international, responsabilité médicale et droit international de la famille.
                         </p>
@@ -232,14 +259,14 @@
     </section>
 
     <!-- Domaines d'intervention -->
-    <section id="domaines" class="py-16 md:py-20 bg-white">
+    <section id="domaines" class="py-12 md:py-16 bg-white">
         <div class="max-w-6xl mx-auto px-6 md:px-8">
-            <h2 class="font-condensed text-3xl font-semibold text-text-dark mb-12 text-center">Domaines d'intervention</h2>
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold text-text-dark mb-10 text-center">Domaines d'intervention</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Droit Pénal -->
-                <div class="bg-white border border-border-light p-8 hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="font-condensed text-xl font-semibold text-text-dark mb-3">Droit Pénal</h3>
+                <div class="bg-white border border-border-light p-6 hover:shadow-lg hover:border-primary/20 transition-all duration-300">
+                    <h3 class="font-sans text-xl font-semibold text-text-dark mb-3">Droit Pénal</h3>
                     <p class="text-sm text-text-medium leading-relaxed">
                         Affaires criminelles ou correctionnelles. Expertise reconnue en droit pénal général avec
                         25 ans d'expérience.
@@ -247,8 +274,8 @@
                 </div>
 
                 <!-- Droit Pénal International -->
-                <div class="bg-white border border-border-light p-8 hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="font-condensed text-xl font-semibold text-text-dark mb-3">Droit Pénal International</h3>
+                <div class="bg-white border border-border-light p-6 hover:shadow-lg hover:border-primary/20 transition-all duration-300">
+                    <h3 class="font-sans text-xl font-semibold text-text-dark mb-3">Droit Pénal International</h3>
                     <p class="text-sm text-text-medium leading-relaxed">
                         Extradition, mandat d'arrêt international ou européen. Assistance d'une clientèle
                         française et internationale.
@@ -256,8 +283,8 @@
                 </div>
 
                 <!-- Responsabilité Médicale -->
-                <div class="bg-white border border-border-light p-8 hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="font-condensed text-xl font-semibold text-text-dark mb-3">Responsabilité Médicale</h3>
+                <div class="bg-white border border-border-light p-6 hover:shadow-lg hover:border-primary/20 transition-all duration-300">
+                    <h3 class="font-sans text-xl font-semibold text-text-dark mb-3">Responsabilité Médicale</h3>
                     <p class="text-sm text-text-medium leading-relaxed">
                         Défense des victimes d'erreurs médicales, aléas thérapeutiques et infections nosocomiales.
                         Procédures judiciaires et amiables.
@@ -265,8 +292,8 @@
                 </div>
 
                 <!-- Droit International de la Famille -->
-                <div class="bg-white border border-border-light p-8 hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="font-condensed text-xl font-semibold text-text-dark mb-3">Droit International de la Famille</h3>
+                <div class="bg-white border border-border-light p-6 hover:shadow-lg hover:border-primary/20 transition-all duration-300">
+                    <h3 class="font-sans text-xl font-semibold text-text-dark mb-3">Droit International de la Famille</h3>
                     <p class="text-sm text-text-medium leading-relaxed">
                         Divorces internationaux, enlèvement international d'enfants. Service bilingue français-anglais
                         avec consultation à distance.
@@ -277,20 +304,20 @@
     </section>
 
     <!-- Nos Valeurs -->
-    <section class="py-16 md:py-20 bg-white">
+    <section class="py-12 md:py-16 bg-white">
         <div class="max-w-4xl mx-auto px-6 md:px-8">
-            <h2 class="font-condensed text-3xl font-semibold text-text-dark mb-8 text-center">Nos Valeurs</h2>
-            <p class="text-sm text-text-medium leading-relaxed text-center mb-6">
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold text-text-dark mb-6 text-center">Nos Valeurs</h2>
+            <p class="text-sm md:text-base text-text-medium leading-relaxed text-center">
                 La transparence, la confiance et la recherche permanente de l'excellence et de la qualité.
             </p>
         </div>
     </section>
 
     <!-- Notre Approche -->
-    <section class="py-16 md:py-20 bg-gray-50">
+    <section class="py-12 md:py-16 bg-gray-50">
         <div class="max-w-4xl mx-auto px-6 md:px-8">
-            <h2 class="font-condensed text-3xl font-semibold text-text-dark mb-8 text-center">Notre Approche</h2>
-            <p class="text-sm text-text-medium leading-relaxed text-center">
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold text-text-dark mb-6 text-center">Notre Approche</h2>
+            <p class="text-sm md:text-base text-text-medium leading-relaxed text-center">
                 Le cabinet met son expérience à votre service afin de proposer une stratégie adéquate pour votre litige
                 et vous proposer des solutions concrètes et adaptées à vos attentes. Ensemble, avec Maître Georges Parastatis,
                 vous définirez une stratégie juridique ou judiciaire, puis la mettrez en œuvre de façon suivie et convenue.
@@ -304,7 +331,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <!-- Cabinet -->
                 <div>
-                    <h3 class="font-condensed text-lg font-semibold mb-4">Cabinet Georges Parastatis</h3>
+                    <h3 class="font-sans text-base font-semibold mb-4">Cabinet Georges Parastatis</h3>
                     <p class="text-xs text-gray-300 leading-relaxed">
                         Avocat au barreau de Paris depuis 1997. Expertise en droit pénal, droit pénal international,
                         responsabilité médicale et droit international de la famille.
@@ -313,26 +340,26 @@
 
                 <!-- Coordonnées -->
                 <div>
-                    <h3 class="font-condensed text-lg font-semibold mb-4">Coordonnées</h3>
+                    <h3 class="font-sans text-base font-semibold mb-4">Coordonnées</h3>
                     <div class="text-xs text-gray-300 space-y-2">
                         <p>89 Avenue de Villiers<br>75017 Paris<br>(Métro Wagram)</p>
-                        <p>Tél : <a href="tel:0144015859" class="hover:text-white">01 44 01 58 59</a></p>
-                        <p>Mobile : <a href="tel:0679602564" class="hover:text-white">06 79 60 25 64</a></p>
-                        <p>Email : <a href="mailto:ge@parastatisavocat.com" class="hover:text-white">ge@parastatisavocat.com</a></p>
+                        <p>Tél : <a href="tel:0144015859" class="hover:text-primary transition-colors">01 44 01 58 59</a></p>
+                        <p>Mobile : <a href="tel:0679602564" class="hover:text-primary transition-colors">06 79 60 25 64</a></p>
+                        <p>Email : <a href="mailto:ge@parastatisavocat.com" class="hover:text-primary transition-colors">ge@parastatisavocat.com</a></p>
                     </div>
                 </div>
 
                 <!-- Navigation -->
                 <div>
-                    <h3 class="font-condensed text-lg font-semibold mb-4">Navigation</h3>
+                    <h3 class="font-sans text-base font-semibold mb-4">Navigation</h3>
                     <div class="text-xs text-gray-300 space-y-2">
-                        <p><a href="index.html" class="hover:text-white">Accueil</a></p>
-                        <p><a href="le-cabinet.html" class="hover:text-white">Le Cabinet</a></p>
-                        <p><a href="droit-penal.html" class="hover:text-white">Droit Pénal</a></p>
-                        <p><a href="droit-international-famille.html" class="hover:text-white">Droit International & Famille</a></p>
-                        <p><a href="responsabilite-medicale.html" class="hover:text-white">Responsabilité Médicale</a></p>
-                        <p><a href="presse.html" class="hover:text-white">Presse</a></p>
-                        <p><a href="contact.html" class="hover:text-white">Contact</a></p>
+                        <p><a href="index.html" class="hover:text-primary transition-colors">Accueil</a></p>
+                        <p><a href="le-cabinet.html" class="hover:text-primary transition-colors">Le Cabinet</a></p>
+                        <p><a href="droit-penal.html" class="hover:text-primary transition-colors">Droit Pénal</a></p>
+                        <p><a href="droit-international-famille.html" class="hover:text-primary transition-colors">Droit International & Famille</a></p>
+                        <p><a href="responsabilite-medicale.html" class="hover:text-primary transition-colors">Responsabilité Médicale</a></p>
+                        <p><a href="presse.html" class="hover:text-primary transition-colors">Presse</a></p>
+                        <p><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></p>
                     </div>
                 </div>
             </div>
@@ -351,15 +378,26 @@
     <button id="btnTop" title="Retour en haut">↑</button>
 
     <script>
-        // Récupérer le bouton
+        // Récupérer les éléments
         const btnTop = document.getElementById("btnTop");
+        const header = document.getElementById("header");
 
-        // Afficher le bouton quand on scroll vers le bas
+        // Afficher le bouton et l'ombre du header quand on scroll
         window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+
+            // Bouton retour en haut
+            if (scrollPosition > 300) {
                 btnTop.style.display = "block";
             } else {
                 btnTop.style.display = "none";
+            }
+
+            // Ombre du header
+            if (scrollPosition > 50) {
+                header.classList.add("shadow-md");
+            } else {
+                header.classList.remove("shadow-md");
             }
         };
 
@@ -367,7 +405,7 @@
         btnTop.onclick = function() {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Animation fluide
+                behavior: 'smooth'
             });
         };
     </script>
